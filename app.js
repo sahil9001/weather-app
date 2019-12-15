@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/results', (req, res) => {
     var query = req.query.city;
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + query + '&appid=' + api_key;
+    var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + query + '&appid=' + api_key;
     console.log(url);
     request(url, (err, res1, body) => {
         if(err){
